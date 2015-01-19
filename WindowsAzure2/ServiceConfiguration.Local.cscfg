@@ -4,6 +4,33 @@
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="madhusudan" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEARbSN4ZJjSGQVgR542dI0cwDQYJKoZIhvcNAQEBBQAEggEAipY/6LFdyfFx59QTG9fKaB1jNonwUyX1NhTv0BDezQxo1kimYiU/qyqaeRE25fXR9B+79Gpp6/OKP9v31mEM+zPZwFLCIiq9efAmjt/z3AiQD+5ft+osG6k2GZP+1bDtDICQUiWSdKO/RFkKInnvUivVqh1XIPGR95PwCvNm5oEdE4fKePgZ3tJDDzCV4ORhBEJJMiXzszdxGP8vU5IGhtoGkt3r+zXWOWg2Eopa0UewQ+bD2dYP0voxVtjVsJC6bMnaI+ysxOBisWW3O3S2M0vcD5WApeZCjcjnTISgQPPsktF4BjiXQgP6XRPXtkec+v2yLMt6ldJbeDwjkyp9yjAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECNExqLeUOJfwgBCHQvMsPKqvbBMEhjz52zOv" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2014-12-22T23:59:59.0000000-08:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+      <Setting name="SageCloudDiagnosticTraceLevel" value="All" />
+      <Setting name="SageCacheProvider" value="Sage.CA.SBS.ERP.Sage300.Core.Cache.InMemoryCacheProvider, Sage.CA.SBS.ERP.Sage300.Core.Cache" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.NamedCaches" value="{&quot;caches&quot;:[{&quot;name&quot;:&quot;default&quot;,&quot;policy&quot;:{&quot;eviction&quot;:{&quot;type&quot;:0},&quot;expiration&quot;:{&quot;defaultTTL&quot;:10,&quot;isExpirable&quot;:true,&quot;type&quot;:2},&quot;serverNotification&quot;:{&quot;isEnabled&quot;:false}},&quot;secondaries&quot;:0},{&quot;name&quot;:&quot;session&quot;,&quot;policy&quot;:{&quot;eviction&quot;:{&quot;type&quot;:0},&quot;expiration&quot;:{&quot;defaultTTL&quot;:20,&quot;isExpirable&quot;:true,&quot;type&quot;:2},&quot;serverNotification&quot;:{&quot;isEnabled&quot;:false}},&quot;secondaries&quot;:1}]}" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.DiagnosticLevel" value="1" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.CacheSizePercentage" value="30" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.ConfigStoreConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.ClientDiagnosticLevel" value="1" />
+      <Setting name="SystemStorageConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="MessageVisibilityTimeOut" value="60" />
+      <Setting name="BlobTimeOut" value="60" />
+      <Setting name="AllowSessionLogging" value="true" />
+      <Setting name="FileServerName" value="//sagefileserver.file.core.windows.net/sagetestshare" />
+      <Setting name="FileServerAccountName" value="sagefileserver" />
+      <Setting name="FileServerAccountKey" value="w9IHKU1Lc0UsgYH9keEyRhTC1IJXbEQaM5LoFEFeLooIFg1zEMcHAf5DVGGZ3tveUczpHjZt9NxPJjBEylW27A==" />
+      <Setting name="DataCryptoThumbprint" value="0BBBF22B703A7D1136B9C3C68B5409D535E59182" />
     </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Sage SSO Identity Root (Pre-Production)" thumbprint="735270E52C4FF87121654CA1837CDB80227AEF37" thumbprintAlgorithm="sha1" />
+      <Certificate name="Sage TESTING NA UM CA" thumbprint="FAE6CCBFFB8934A17C26D49F6837D870C97CAFF1" thumbprintAlgorithm="sha1" />
+      <Certificate name="Sage Nephos Development wildcat.sagenephos.com" thumbprint="9584058EEBB86D3E930EF6AFBE03769827F72A9E" thumbprintAlgorithm="sha1" />
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="D3400ABD4DBCD643AE488CE0CFF7C1CE4D44A3F5" thumbprintAlgorithm="sha1" />
+      <Certificate name="Cryptography Certificate" thumbprint="0BBBF22B703A7D1136B9C3C68B5409D535E59182" thumbprintAlgorithm="sha1" />
+    </Certificates>
   </Role>
 </ServiceConfiguration>

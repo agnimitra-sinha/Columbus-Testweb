@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ServiceDefinition name="WindowsAzure2" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-01.2.3">
   <WebRole name="WebApplication1" vmsize="Small">
+    <Runtime executionContext="elevated">
+    </Runtime>
     <Sites>
       <Site name="Web">
         <Bindings>
@@ -9,10 +11,38 @@
       </Site>
     </Sites>
     <Endpoints>
-      <InputEndpoint name="Endpoint1" protocol="http" port="80" />
+      <InternalEndpoint name="Endpoint1" protocol="http" port="80" />
+      <InternalEndpoint name="NetBIOSSession" protocol="tcp" port="139" />
+      <InternalEndpoint name="SMB" protocol="tcp" port="445" />
     </Endpoints>
     <Imports>
       <Import moduleName="Diagnostics" />
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />
+      <Import moduleName="Caching" />
     </Imports>
+    <ConfigurationSettings>
+      <Setting name="SageCloudDiagnosticTraceLevel" />
+      <Setting name="SageCacheProvider" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.ClientDiagnosticLevel" />
+      <Setting name="SystemStorageConnectionString" />
+      <Setting name="MessageVisibilityTimeOut" />
+      <Setting name="BlobTimeOut" />
+      <Setting name="AllowSessionLogging" />
+      <Setting name="FileServerName" />
+      <Setting name="FileServerAccountName" />
+      <Setting name="FileServerAccountKey" />
+      <Setting name="DataCryptoThumbprint" />
+    </ConfigurationSettings>
+    <LocalResources>
+      <LocalStorage name="LocalTempFolder" cleanOnRoleRecycle="true" sizeInMB="8192" />
+      <LocalStorage name="DiagnosticStore" sizeInMB="20000" cleanOnRoleRecycle="false" />
+    </LocalResources>
+    <Certificates>
+      <Certificate name="Sage SSO Identity Root (Pre-Production)" storeLocation="LocalMachine" storeName="My" />
+      <Certificate name="Sage TESTING NA UM CA" storeLocation="LocalMachine" storeName="My" />
+      <Certificate name="Sage Nephos Development wildcat.sagenephos.com" storeLocation="LocalMachine" storeName="My" />
+      <Certificate name="Cryptography Certificate" storeLocation="LocalMachine" storeName="My" />
+    </Certificates>
   </WebRole>
 </ServiceDefinition>
